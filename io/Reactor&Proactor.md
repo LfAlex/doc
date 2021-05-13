@@ -8,7 +8,7 @@
 
 thread-based architecture（基于线程的架构），通俗的说就是：多线程并发模式，一个连接一个线程，服务器每当收到客户端的一个请求， 便开启一个独立的线程来处理。
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-288b2a61dbfcf488eefd4a6ab9ad08dc_720w.jpg)
+![img](E:\doc\io\v2-288b2a61dbfcf488eefd4a6ab9ad08dc_720w.jpg)
 
 这种模式一定程度上极大地提高了服务器的吞吐量，由于在不同线程中，之前的请求在read阻塞以后，不会影响到后续的请求。**但是**，仅适用于于并发量不大的场景，因为：
 
@@ -37,7 +37,7 @@ Reactor模式和Proactor模式都是是event-driven architecture（事件驱动�
 
 下面的图将直观地展示上述文字描述：
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-cfd7ed4a76c7b1df386bc4bd9576faca_720w.jpg)
+![img](E:\doc\io\v2-cfd7ed4a76c7b1df386bc4bd9576faca_720w.jpg)
 
 
 
@@ -47,7 +47,7 @@ Reactor模式也有三种不同的方式，下面一一介绍。
 
 Java中的NIO模式的Selector网络通讯，其实就是一个简单的Reactor模型。可以说是单线程的Reactor模式
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-5f97abecc66698d6b1ce3034267e1fff_720w.jpg)
+![img](E:\doc\io\v2-5f97abecc66698d6b1ce3034267e1fff_720w.jpg)
 
 Reactor的单线程模式的单线程主要是针对于I/O操作而言，也就是所以的I/O的accept()、read()、write()以及connect()操作都在一个线程上完成的。
 
@@ -57,7 +57,7 @@ Reactor的单线程模式的单线程主要是针对于I/O操作而言，也就�
 
 与单线程模式不同的是，添加了一个**工作者线程池**，并将非I/O操作从Reactor线程中移出转交给工作者线程池（Thread Pool）来执行。这样能够提高Reactor线程的I/O响应，不至于因为一些耗时的业务逻辑而延迟对后面I/O请求的处理。
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-2ffa44b686eea3ce55c7489fd67d1c1e_720w.jpg)
+![img](E:\doc\io\v2-2ffa44b686eea3ce55c7489fd67d1c1e_720w.jpg)
 
 
 
@@ -67,7 +67,7 @@ Reactor的单线程模式的单线程主要是针对于I/O操作而言，也就�
 
 对于多个CPU的机器，为充分利用系统资源，将Reactor拆分为两部分：mainReactor和subReactor
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-14b10c1dd4c45a1fe3fd92f91fffe2e3_720w.jpg)
+![img](E:\doc\io\v2-14b10c1dd4c45a1fe3fd92f91fffe2e3_720w.jpg)
 
 **mainReactor**负责监听server socket，用来处理网络新连接的建立，将建立的socketChannel指定注册给subReactor，通常**一个线程**就可以处理 ；
 
@@ -84,13 +84,13 @@ Reactor的单线程模式的单线程主要是针对于I/O操作而言，也就�
 
 流程与Reactor模式类似，区别在于proactor在IO ready事件触发后，完成IO操作再通知应用回调。虽然在linux平台还是基于epoll/select，但是内部实现了异步操作处理器(Asynchronous Operation Processor)以及异步事件分离器(Asynchronous Event Demultiplexer)将IO操作与应用回调隔离。经典应用例如boost asio异步IO库的结构和流程图如下：
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-3ed3d63b31460c562e43dfd32d808e9b_720w.jpg)
+![img](E:\doc\io\v2-3ed3d63b31460c562e43dfd32d808e9b_720w.jpg)
 
 再直观一点，就是下面这幅图：
 
 
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-ae0c50cb3b3480fc36b8614b8b77f528_720w.jpg)
+![img](E:\doc\io\v2-ae0c50cb3b3480fc36b8614b8b77f528_720w.jpg)
 
 
 
@@ -98,7 +98,7 @@ Reactor的单线程模式的单线程主要是针对于I/O操作而言，也就�
 
 
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-557eee325d2e29665930825618f7b212_720w.jpg)
+![img](E:\doc\io\v2-557eee325d2e29665930825618f7b212_720w.jpg)
 
 针对第二幅图在稍作解释：
 

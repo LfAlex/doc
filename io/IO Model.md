@@ -67,9 +67,9 @@
 
 
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-4e2522fa7b0d14530b08097821bf8daf_720w.jpg)
+![img](E:\doc\io\v2-4e2522fa7b0d14530b08097821bf8daf_720w.jpg)
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-8caf9a2d0a49c3d72cddb40de7f2979e_720w.jpg)
+![img](E:\doc\io\v2-8caf9a2d0a49c3d72cddb40de7f2979e_720w.jpg)
 
 
 
@@ -92,9 +92,9 @@
 
 同步非阻塞IO是在同步阻塞IO的基础上，将socket设置为NONBLOCK。这样做用户线程可以在发起IO请求后可以立即返回。
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-911e402697f97ffe8e5a5600c7270a3c_720w.jpg)
+![img](E:\doc\io\v2-911e402697f97ffe8e5a5600c7270a3c_720w.jpg)
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-6d7f042c99e0117df576b4e3e09f22f9_720w.jpg)
+![img](E:\doc\io\v2-6d7f042c99e0117df576b4e3e09f22f9_720w.jpg)
 
 由于socket是非阻塞的方式，因此用户线程发起IO请求时立即返回。但并未读取到任何数据，用户线程需要不断地发起IO请求，直到数据到达后，才真正读取到数据，继续执行。
 
@@ -115,9 +115,9 @@
 
 IO多路复用模型是建立在内核提供的多路分离函数select基础之上的，使用select函数可以避免同步非阻塞IO模型中轮询等待的问题。
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-12733e29dd55aa383bd11b915380c731_720w.jpg)
+![img](E:\doc\io\v2-12733e29dd55aa383bd11b915380c731_720w.jpg)
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-fba6c2868dc5d8e1f369c09e785ace61_720w.jpg)
+![img](E:\doc\io\v2-fba6c2868dc5d8e1f369c09e785ace61_720w.jpg)
 
 用户首先将需要进行IO操作的socket添加到select中，然后**阻塞地等待select系统调用返回**。当数据到达时，socket被激活，select函数返回。用户线程正式发起read请求，读取数据并继续执行。
 
@@ -149,7 +149,7 @@ IO多路复用模型是建立在内核提供的多路分离函数select基础之
 
 使用信号，让内核在文件描述符就绪的时候使用 SIGIO 信号来通知我们。我们将这种模式称为信号驱动 I/O 模式。
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-60846891d1313780332404b3deaf70af_720w.jpg)
+![img](E:\doc\io\v2-60846891d1313780332404b3deaf70af_720w.jpg)
 
 允许Socket使用信号驱动 I/O ，还要注册一个 SIGIO 的处理函数，这时的系统调用将会立即返回。然后我们的程序可以继续做其他的事情，当数据就绪时，进程收到系统发送一个 SIGIO 信号，可以在信号处理函数中调用IO操作函数处理数据
 
@@ -163,7 +163,7 @@ Linux下的异步IO其实用得很少 ，著名的高性能网络框架netty 5.0
 
 第二阶段：当内核完成所有的 I/O 操作和数据拷贝后，内核将通知我们的程序，此时数据已经在用户空间了,可以对数据进行处理了
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-88b4fa8799f704a2af612bf7d5d3fe08_720w.jpg)
+![img](E:\doc\io\v2-88b4fa8799f704a2af612bf7d5d3fe08_720w.jpg)
 
 
 
@@ -171,7 +171,7 @@ Linux下的异步IO其实用得很少 ，著名的高性能网络框架netty 5.0
 
 
 
-![img](C:\Users\feng.liu\Desktop\doc\io\v2-a9da26b83eb1011b230647977d16c8f7_720w.jpg)
+![img](E:\doc\io\v2-a9da26b83eb1011b230647977d16c8f7_720w.jpg)
 
 前四种I/O模型都是同步I/O操作，他们的区别在于第一阶段，而他们的第二阶段是一样的。
 
