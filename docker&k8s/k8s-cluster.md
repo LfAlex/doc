@@ -268,7 +268,7 @@ $ source /etc/profile.d/bash_completion.sh
 
 登陆地址为：[https://cr.console.aliyun.com](https://cr.console.aliyun.com/) ,未注册可以先注册阿里云账户容器模块
 
-![img](C:\Users\ALEX\Desktop\learn\docker&k8s\371f703c2321216990b2408d10af2ca1.png)
+![img](371f703c2321216990b2408d10af2ca1.png)
 
 #### 3.6.2 配置镜像加速器
 
@@ -386,7 +386,7 @@ $ yum install -y kubelet-1.21.0-0 kubeadm-1.21.0-0 kubectl-1.21.0-0
 
 **安装的软件版本如下:**
 
-![img](C:\Users\ALEX\Desktop\learn\docker&k8s\1f9a820a0e0861401e26f523354da1a3.png)
+![img](1f9a820a0e0861401e26f523354da1a3.png)
 
 ### 4.4 启动kubelet
 
@@ -907,7 +907,7 @@ Commercial support is available at
 
 ### 8.3 在集群外面访问
 
-![img](C:\Users\ALEX\Desktop\learn\docker&k8s\f18d48cf23c912f7bca948af9cebc05e.png)
+![img](f18d48cf23c912f7bca948af9cebc05e.png)
 
 ## 九、安装Dashboard UI
 
@@ -1052,8 +1052,8 @@ kubectl get pod -n kube-system
 kubectl delete pod <pod name> -n kube-system
 ```
 
-![img](C:\Users\ALEX\Desktop\learn\docker&k8s\964e905a13ecb7cf1943ba7550ab3900.png)
+![img](964e905a13ecb7cf1943ba7550ab3900.png)
 
 #### 3.3.4 可以看到集群中的情况
 
-![img](C:\Users\ALEX\Desktop\learn\docker&k8s\4b0bca530c8e38df7cc4142fade2ccb4.png)
+![img](4b0bca530c8e38df7cc4142fade2ccb4.png)

@@ -54,7 +54,7 @@
 
 #### CPU利用情况
 
-![](E:\doc\linux\single_os_cpu.png)
+![](single_os_cpu.png)
 
 #### 缺点
 
@@ -78,7 +78,7 @@
 
 #### CPU利用情况
 
-![](E:\doc\linux\multy_os_cpu.png)
+![](multy_os_cpu.png)
 
 #### 缺点
 
@@ -157,7 +157,7 @@ Linux——kernel.org
 
 TCP/IP协议栈
 
-![](E:\doc\linux\os_layer.png)
+![](os_layer.png)
 
 ### 分层原则
 
@@ -245,7 +245,7 @@ TCP/IP协议栈
 
 ### 分级存储系统的工作原理
 
-![](E:\doc\linux\CPU_store_work_reason.png)
+![](CPU_store_work_reason.png)
 
 ## 中断机制
 
@@ -260,7 +260,7 @@ TCP/IP协议栈
 - 实现实时处理
 - 故障自动处理
 
-![](E:\doc\linux\CPU_interrupt.png)
+![](CPU_interrupt.png)
 
 ### 中断源和中断类型
 
@@ -315,7 +315,7 @@ TCP/IP协议栈
 #### 1、实模式（real mode）
 
 -  程序按照8086寻址方法访问0h-FFFFFh（1Mb）空间
-- ![](E:\doc\linux\start_model.png)
+- ![](start_model.png)
 - 寻址方式：物理地址（20位）=段地址：偏移地址
 - CPU单任务运行
 
@@ -350,17 +350,17 @@ Basic I/O System（Firm/ware 固件）
 - 512Bytes
 - 结束：0xAA55h
 
-![](E:\doc\linux\mbr_workspace.png)
+![](mbr_workspace.png)
 
 #### 流程
 
 当按下电源开关时执行FFFF0处的指令即JUMP POST；POST位于系统BIOS内部
 
-![](E:\doc\linux\start_flow.png)
+![](start_flow.png)
 
 从硬盘或软盘中读取OS时，首先读取主启动记录MBR
 
-![](E:\doc\linux\bios_mbr_start_flow.png)
+![](bios_mbr_start_flow.png)
 
 ### 操作系统的启动过程
 
@@ -412,15 +412,15 @@ OS内核初始化系统的核心数据
 
 ### Windows启动过程
 
-![](E:\doc\linux\windows_start_flow.png)
+![](windows_start_flow.png)
 
 ### Linux启动过程
 
-![](E:\doc\linux\linux_start_flow_1.png)
+![](linux_start_flow_1.png)
 
-![](E:\doc\linux\linux_start_flow_2.png)
+![](linux_start_flow_2.png)
 
-![](E:\doc\linux\linux_login.png)
+![](linux_login.png)
 
 ## 操作系统的生成
 
@@ -439,7 +439,7 @@ OS内核初始化系统的核心数据
 
 ### Linux操作系统的生成
 
-![](E:\doc\linux\build_linux_flow.png)
+![](build_linux_flow.png)
 
 ## 用户界面
 
@@ -461,7 +461,7 @@ OS提供给用户控制计算机的机制，又称用户接口
 
 ### shell
 
-![](E:\doc\linux\shell.png)
+![](shell.png)
 
 ### 系统调用
 
@@ -482,15 +482,15 @@ windows使用21H系统调用，利用AH寄存器存放系统调用编号
 
 Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调用的编号
 
-![](E:\doc\linux\system_call.png)
+![](system_call.png)
 
 ##### 隐式系统调用
 
-![](E:\doc\linux\system_call_hidden.png)
+![](system_call_hidden.png)
 
 ##### Linux系统调用
 
-![](E:\doc\linux\system_call_linux.png)
+![](system_call_linux.png)
 
 # 四、进程管理
 
@@ -553,9 +553,9 @@ Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调�
 
 进程的状态可以依据一定的条件相互转化
 
-![](E:\doc\linux\thread_status.png)
+![](thread_status.png)
 
-![](E:\doc\linux\thread_status_details.png)
+![](thread_status_details.png)
 
 ### Linux进程的状态
 
@@ -570,7 +570,7 @@ Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调�
 - 挂起态：TASK_STOPPED
   - 进程被挂起
 
-![](E:\doc\linux\linux_status_flow.png)
+![](linux_status_flow.png)
 
 ## 进程控制块PCB
 
@@ -584,7 +584,7 @@ Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调�
 
 #### 进程=程序+PCB
 
-![](E:\doc\linux\PCB.png)
+![](PCB.png)
 
 #### PCB中的基本成员
 
@@ -602,7 +602,7 @@ Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调�
 
 文件：sched.h
 
-![](E:\doc\linux\linux_task_struct.png)
+![](linux_task_struct.png)
 
 - Linux进程的标识
   - PID
@@ -713,7 +713,7 @@ Linux使用INT 80h中断实现系统调用，利用EAX寄存器存放系统调�
 
 ### windows控制进程
 
-![](E:\doc\linux\windows_create_process.png)
+![](windows_create_process.png)
 
 ### Linux控制进程
 
@@ -820,7 +820,7 @@ pid_t fork(void);
 
 1. 把锁S的状态置1；
 
-![](E:\doc\linux\lock_step.png)
+![](lock_step.png)
 
 ## 进程同步和P-V操作
 
@@ -906,13 +906,13 @@ P-V操作应用于进程同步的基本思路
 
 1. 生产者和消费者问题
 
-   ![](E:\doc\linux\product_consumer_question.png)
+   ![](product_consumer_question.png)
 
 #### Windows和Linux同步机制的实现
 
 ##### windows
 
-![](E:\doc\linux\windows_synchronized.png)
+![](windows_synchronized.png)
 
 ##### Linux
 
@@ -943,7 +943,7 @@ sleep
 
 #### 信号的来源
 
-![](E:\doc\linux\linux_signal.png)
+![](linux_signal.png)
 
 # 五、死锁
 
@@ -958,7 +958,7 @@ sleep
 - 系统资源优先：资源数目不足，进程对资源的竞争而产生的死锁
 - 并发进程的推进顺序不当：进程请求资源和释放资源的顺序不当，导致死锁
 
-![](E:\doc\linux\dead_lock.png)
+![](dead_lock.png)
 
 ## 死锁的预防策略
 
@@ -1034,17 +1034,17 @@ sleep
 
 ### 响应比高者优先调度算法
 
-![](E:\doc\linux\response_sechdule.png)
+![](response_sechdule.png)
 
 ### 优先数调度算法
 
-![](E:\doc\linux\priority_schedu.png)
+![](priority_schedu.png)
 
 ### 循环轮转调度法（Round-Robin）
 
-![](E:\doc\linux\round_robin_schedu.png)
+![](round_robin_schedu.png)
 
-![](E:\doc\linux\round_merit_demerit_schedu.png)
+![](round_merit_demerit_schedu.png)
 
 ### 可变时间片轮转调度法
 
@@ -1079,13 +1079,13 @@ sleep
 - 控制信息：进程描述符，内核堆栈等
 - 硬件上下文（注意中断也要保存硬件上下文只是保存的方法不同）
 
-![](E:\doc\linux\linux_process_switch.png)
+![](linux_process_switch.png)
 
 # 七、存储管理
 
 ## 内存管理功能
 
-![](E:\doc\linux\repository_structure.png)
+![](repository_structure.png)
 
 ## 存储管理的功能
 
@@ -1110,7 +1110,7 @@ sleep
 
 定义：程序装入时由操作系统完成逻辑地址到物理地址的映射
 
-![](E:\doc\linux\static_address_mapping.png)
+![](static_address_mapping.png)
 
 特点：
 
@@ -1133,7 +1133,7 @@ sleep
 
 特点： 
 
-![](E:\doc\linux\dynamic_addr_mapping.png)
+![](dynamic_addr_mapping.png)
 
 ### 虚拟存储
 
@@ -1146,9 +1146,9 @@ sleep
 
 虚拟内存是面向用户的虚拟封闭存储空间
 
-![](E:\doc\linux\virtual_mem.png)
+![](virtual_mem.png)
 
-![](E:\doc\linux\virtual_mem_target.png)
+![](virtual_mem_target.png)
 
 ### 内存分配
 
@@ -1166,7 +1166,7 @@ sleep
 
 #### 定义及方法
 
-![](E:\doc\linux\mem_protect.png)
+![](mem_protect.png)
 
 ## 物理内存管理
 
@@ -1209,7 +1209,7 @@ sleep
 
 - 记录分区的位置、大小和使用标志
 
-![](E:\doc\linux\fixed_mem.png)
+![](fixed_mem.png)
 
 ###### 特点
 
@@ -1238,7 +1238,7 @@ sleep
 
 ###### 问题
 
-![](E:\doc\linux\fragment_mem.png)
+![](fragment_mem.png)
 
 - 分区的分配
 - 分区的选择
@@ -1253,11 +1253,11 @@ sleep
 
 描述内存空闲区的位置和大小的数据结构
 
-![](E:\doc\linux\free_table.png)
+![](free_table.png)
 
 ##### 分配过程
 
-![](E:\doc\linux\switch_area_prolicy.png)
+![](switch_area_prolicy.png)
 
 ##### 放置策略
 
@@ -1278,7 +1278,7 @@ sleep
 
 过程：
 
-![](E:\doc\linux\mem_recycle.png)
+![](mem_recycle.png)
 
 ### 内存覆盖技术
 
@@ -1288,7 +1288,7 @@ sleep
 
 覆盖区：程序覆盖使用内存，可分多个区
 
-![](E:\doc\linux\mem_overlary.png)
+![](mem_overlary.png)
 
 ### 内存交换技术
 
@@ -1388,23 +1388,23 @@ sleep
 
 #### 进程装入和使用内存的原则
 
-![](E:\doc\linux\mem_page_use.png)
+![](mem_page_use.png)
 
 #### 页表和页式地址映射
 
- ![](E:\doc\linux\mem_page_mapping.png)
+ ![](mem_page_mapping.png)
 
 ##### 页表
 
-![](E:\doc\linux\mem_page_table.png)
+![](mem_page_table.png)
 
-![](E:\doc\linux\mem_page_table_sample.png)
+![](mem_page_table_sample.png)
 
 #### 页式地址映射
 
-![](E:\doc\linux\mem_page_mapping_flow.png)
+![](mem_page_mapping_flow.png)
 
-![](E:\doc\linux\mem_page_mapping_sample.png)
+![](mem_page_mapping_sample.png)
 
 ### 快表技术和页面共享技术
 
@@ -1426,7 +1426,7 @@ sleep
 
 ##### 快表机制下地址映射过程
 
-![](E:\doc\linux\mem_page_fast_table_flow.png)
+![](mem_page_fast_table_flow.png)
 
 #### 页面的共享
 
@@ -1435,21 +1435,21 @@ sleep
 - 在不同进程的页表中填上相同的页框号，多个进程能访问相同的内存空间，从而实现页面共享
 - 共享页面在内存只有一份真实存储，节省内存
 
-![](E:\doc\linux\mem_page_share_sample.png)
+![](mem_page_share_sample.png)
 
 ### 缺页中断
 
 #### 分级存储体系
 
-![](E:\doc\linux\mem_level_repository.png)
+![](mem_level_repository.png)
 
 #### 页表扩充
 
-![](E:\doc\linux\mem_page_table_extend.png)
+![](mem_page_table_extend.png)
 
 
 
-![](E:\doc\linux\mem_page_table_extend_2.png)
+![](mem_page_table_extend_2.png)
 
 #### 定义
 
@@ -1461,7 +1461,7 @@ sleep
 
 #### 访存指令的执行过程（含缺页中断处理）
 
-![](E:\doc\linux\mem_visit_cache_flow.png)
+![](mem_visit_cache_flow.png)
 
 ### 页面淘汰策略
 
@@ -1492,7 +1492,7 @@ sleep
 
 - 淘汰以后不再需要或最远的将来才会用到的页面
 
-![](E:\doc\linux\mem_page_best_algorithm.png)
+![](mem_page_best_algorithm.png)
 
 ##### 特点
 
@@ -1504,7 +1504,7 @@ sleep
 
 - 淘汰在内存中停留时间最长的页面
 
-![](E:\doc\linux\mem_page_fifo.png)
+![](mem_page_fifo.png)
 
 ##### 优点
 
@@ -1515,7 +1515,7 @@ sleep
 - 进程只有按顺序访问地址空间时页面命中率才最理想
 - 异常现象：对于一些特定的访问序列，随分配的页框增多，缺页率反而增加
 
-![](E:\doc\linux\mem_page_fifo_defect.png)
+![](mem_page_fifo_defect.png)
 
 #### 最久未使用淘汰算法（LRU，least recently used）
 
@@ -1523,15 +1523,15 @@ sleep
 
 - 淘汰最长时间未被使用的页面
 
-![](E:\doc\linux\mem_page_lru.png)
+![](mem_page_lru.png)
 
 ##### LRU的实现
 
-![](E:\doc\linux\mem_page_lru_implement.png)
+![](mem_page_lru_implement.png)
 
 ##### LRU近似算法
 
-![](E:\doc\linux\mem_page_lru_implement_2.png)
+![](mem_page_lru_implement_2.png)
 
 ###### 缺点
 
@@ -1581,7 +1581,7 @@ sleep
 - 把进程按逻辑意义划分为多个段，每段有段名，长度不定，进程由多段组成
 - 例：一个具有代码段、数据段、堆栈段的进程
 
-![](E:\doc\linux\process_subsection_manager.png)
+![](process_subsection_manager.png)
 
 ##### 段式内存管理系统的内存分配
 
@@ -1597,7 +1597,7 @@ sleep
 
 - 记录每段在内存中映射的位置
 
-![](E:\doc\linux\smt.png)
+![](smt.png)
 
 - 段号S：段的编号（唯一的）
 - 段长L：该段的长度
@@ -1610,14 +1610,14 @@ sleep
    - 检索段号S，查询该段基地址B和长度L
 3. 物理地址MA=B+W
 
-![](E:\doc\linux\smt_flow.png)
+![](smt_flow.png)
 
 ##### 段表的扩充
 
 - 基本字段：段号，长度，基址
 - 扩展字段：中断位，访问位，修改位，R/W/X
 
-![](E:\doc\linux\smt_extend.png)
+![](smt_extend.png)
 
 ##### 段的共享
 
@@ -1648,13 +1648,13 @@ sleep
 - 在段式存储管理中心结合页式存储管理技术
 - 在段中划分页面
 
-![](E:\doc\linux\segment_page.png)
+![](segment_page.png)
 
 ##### 段页式系统的地址构成
 
 段号，页号，页内偏移
 
-![](E:\doc\linux\segment_page_addr.png)
+![](segment_page_addr.png)
 
 - 逻辑地址：段号S、页号P和页内位移W
 - 内存按页划分，按页装入
@@ -1669,7 +1669,7 @@ sleep
 
 ##### 段页式地址的映射过程
 
-![](E:\doc\linux\segment_page_mapping.png)
+![](segment_page_mapping.png)
 
 ## Intel CPU与Linux内存管理 
 
@@ -1697,21 +1697,21 @@ sleep
 
 ##### CR0
 
-![]()![cr0](E:\doc\linux\cr0.png)
+![]()![cr0](cr0.png)
 
 ##### CR2
 
-![](E:\doc\linux\cr2.png)
+![](cr2.png)
 
 ##### CR3
 
-![](E:\doc\linux\cr3.png)
+![](cr3.png)
 
 #### X86 CPU架构下的三种地址
 
-![](E:\doc\linux\x86_three_addr.png)
+![](x86_three_addr.png)
 
-![](E:\doc\linux\x86_three_addr_mmu.png)
+![](x86_three_addr_mmu.png)
 
 ### Intel CPU段机制
 
@@ -1731,11 +1731,11 @@ sleep
   - 段基址：32位（段基址1+段基址2）
   - 段界限：20位（段基址1+段界限2）
 
-  ![](E:\doc\linux\segment_descriptor.png)
+  ![](segment_descriptor.png)
 
 #### 描述符的数据结构
 
-![](E:\doc\linux\code_descriptor.png)
+![](code_descriptor.png)
 
 #### 描述符表（Descriptor Table）
 
@@ -1753,13 +1753,13 @@ sleep
 
 #### 选择子（Selector）
 
-![](E:\doc\linux\selector.png)
+![](selector.png)
 
-![](E:\doc\linux\selector_sample.png)
+![](selector_sample.png)
 
 #### 保护模式逻辑地址转换线性地址过程（32位，4G）
 
-![](E:\doc\linux\gdt_ldt_flow.png)
+![](gdt_ldt_flow.png)
 
 ### Linux的页面机制
 
@@ -1772,19 +1772,19 @@ sleep
 
 #### 普通页表实现时的问题
 
-![](E:\doc\linux\general_implement_question.png)
+![](general_implement_question.png)
 
 #### 二级页表
 
-![](E:\doc\linux\second_level_page_table.png)
+![](second_level_page_table.png)
 
 ##### 页目录（一级页表）
 
-![](E:\doc\linux\first_level_page_table.png)
+![](first_level_page_table.png)
 
 ##### Windows NT 二级页表的结构
 
-![](E:\doc\linux\windownt_second_page_table.png)
+![](windownt_second_page_table.png)
 
 ##### 特点
 
@@ -1795,7 +1795,7 @@ sleep
 
 #### 三及页表
 
-![](E:\doc\linux\linux_third_level_page_table.png)
+![](linux_third_level_page_table.png)
 
 ### Linux对于段的支持
 
@@ -1807,15 +1807,15 @@ sleep
 
 - 进程建立时，段机制对寄存器的初始化：start_thread()
 
-  ![](E:\doc\linux\linux_init_segment.png)
+  ![](linux_init_segment.png)
 
-![](E:\doc\linux\linux_init_segment_2.png)
+![](linux_init_segment_2.png)
 
-![](E:\doc\linux\linux_init_segment_3.png)
+![](linux_init_segment_3.png)
 
-![](E:\doc\linux\linux_init_segment_4.png)
+![](linux_init_segment_4.png)
 
-![](E:\doc\linux\linux_init_segment_5.png)
+![](linux_init_segment_5.png)
 
 - Linux四个范围一样的段：0~0xFFFFFFFF（4G）
   - 内核数据段|内核代码段|用户数据段|用户代码段
@@ -1854,11 +1854,11 @@ sleep
 
 #### 键盘
 
-![](E:\doc\linux\keyboard.png)
+![](keyboard.png)
 
 #### 硬盘
 
-![](E:\doc\linux\hard_disk.png)
+![](hard_disk.png)
 
 ### 设备管理的主要功能
 
@@ -1929,11 +1929,11 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
 例子
 
-![](E:\doc\linux\spooling_sample.png)
+![](spooling_sample.png)
 
 ### 结构
 
-![](E:\doc\linux\spooling_structure.png)
+![](spooling_structure.png)
 
 #### 输入井和输出井
 
@@ -1977,7 +1977,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
   - 经过装载（即链接）成为内核一部分
   - 可以动态加载或卸载
 
-![](E:\doc\linux\linux_module.png)
+![](linux_module.png)
 
 ## Linux驱动程序（LDD）
 
@@ -2005,7 +2005,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 - 字符设备和块设备通过设备文件访问
   - Linux文件系统中可以找到设备文件
 
-![](E:\doc\linux\equipment_file.png)
+![](equipment_file.png)
 
 #### 主设备号和次设备号
 
@@ -2038,7 +2038,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
     - 信息项可以是字节，可以是结构化数据
 
-      ![](E:\doc\linux\file_system_pointer.png)
+      ![](file_system_pointer.png)
 
   - 用户通过读写指针来存取文件的信息项
 
@@ -2161,7 +2161,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
 - 文件目录记录文件长度（块数）和第一个存储块的块号
 
-  ![](E:\doc\linux\continuos_file.png)
+  ![](continuos_file.png)
 
 #### 特点
 
@@ -2189,7 +2189,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 - 建立索引表记录文件逻辑块和物理存储块的对应关系
 - 索引表单独放在存储块中
 
-![](E:\doc\linux\indexes_file.png)
+![](indexes_file.png)
 
 #### 特点
 
@@ -2207,7 +2207,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
   - 文件目录：指明文件名和第一个存储块的块号
   - FFFF结束
 
- ![](E:\doc\linux\linked_filepng.png)
+ ![](linked_filepng.png)
 
 #### 特点
 
@@ -2228,11 +2228,11 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 - FAT: File Allocation Table
 - FAT文件系统
 
-![](E:\doc\linux\fat_classify.png)
+![](fat_classify.png)
 
 ### 文件分配表（FAT）
 
-![](E:\doc\linux\fat_flow.png)
+![](fat_flow.png)
 
 ### 文件分配表的缺点
 
@@ -2269,7 +2269,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 - 簇是扇区的倍数，是2的次幂，最大64扇区
   - 扇区512B，簇32KB（64个扇区）
 
-![](E:\doc\linux\fat16.png)
+![](fat16.png)
 
 ## 文件存储和目录
 
@@ -2291,7 +2291,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
     - 为空闲文件建立的专门目录：空闲文件目录
     - 每个表项对应一个空闲文件，包括第一个空闲块号，空闲块个数等信息
 
-  ![](E:\doc\linux\free_piece.png)
+  ![](free_piece.png)
 
 - 空闲块链
 
@@ -2303,7 +2303,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
   - 从内存中划出若干个字节，每个bit表示1个存储块空闲或占用状态
 
-    ![](E:\doc\linux\file_bitmap.png)
+    ![](file_bitmap.png)
 
 ### 文件目录管理
 
@@ -2319,7 +2319,7 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
 #### 目录结构
 
-![](E:\doc\linux\file_list_manage.png)
+![](file_list_manage.png)
 
 - 单级目录
 
@@ -2344,11 +2344,11 @@ spooling（Simultaneaus Periphernal Operations Online）系统是虚拟技术和
 
 #### 文件的保护
 
-![](E:\doc\linux\file_protect_authority.png)
+![](file_protect_authority.png)
 
 #### 文件和目录操作
 
-![](E:\doc\linux\file_operation.png)
+![](file_operation.png)
 
 #### 典型文件系统
 

@@ -1,6 +1,6 @@
 # 硬件
 
-![](E:\doc\base\计算机组成.png)
+![](计算机组成.png)
 
 ## CPU
 
@@ -42,37 +42,37 @@ dcl加volatile
 
 重排序前
 
-![](E:\doc\base\dcl_resort_1.png)
+![](dcl_resort_1.png)
 
 重排序后
 
-![](E:\doc\base\dcl_resort_2.png)
+![](dcl_resort_2.png)
 
 #### CPU层面如何禁止重排序
 
 内存屏障或者锁总线
 
-![](E:\doc\base\disable_command_resort.png)
+![](disable_command_resort.png)
 
 注：lfence：loadFence、sfence：saveFence、mfence：mixedFence 
 
-![](E:\doc\base\memory_barrier.png)
+![](memory_barrier.png)
 
 锁总线：
 
-![](E:\doc\base\cpu_lock.png)
+![](cpu_lock.png)
 
 jvm虚拟机内存屏障实现
 
-![](E:\doc\base\jsr_memory_barrier.png)
+![](jsr_memory_barrier.png)
 
 jvm Volatile实现细节
 
-![](E:\doc\base\jvm_volatile_memory_barrier.png)
+![](jvm_volatile_memory_barrier.png)
 
 8个happens原则，四个内存屏障（ss，sl，ll，ls）
 
-![](E:\doc\base\happens_before.png)
+![](happens_before.png)
 
 as if serial ：不管如何重排序，单线程执行结果不会改变
 
@@ -80,7 +80,7 @@ as if serial ：不管如何重排序，单线程执行结果不会改变
 
 一般是4个字节，alu速度太快，会在写入l1的同时用wc写入l2
 
-![](E:\doc\base\wirte_combining.png)
+![](wirte_combining.png)
 
 ### 组成
 
@@ -98,11 +98,11 @@ Cache： 缓存L0、L1等等
 
 ### 存储器结构
 
-![](E:\doc\base\存储器的层次结构.png)
+![](存储器的层次结构.png)
 
 ### 缓存一致性
 
-![](E:\doc\base\缓存一致性.png)
+![](缓存一致性.png)
 
 缓存行：
 
@@ -114,7 +114,7 @@ Cache： 缓存L0、L1等等
 
 缓存行对齐：对于有些特别敏感的数字，会存在线程高竞争的访问，为了保证不发生为共享，可以使用缓存行对齐的编程方式
 
-![](E:\doc\base\缓存行补齐.png)
+![](缓存行补齐.png)
 
 JDK7中，很多采用long padding提高效率
 
@@ -124,9 +124,9 @@ JDK8中，加入@Contended注解，使用虚假上：JVM -XX:-RestrictContended�
 
 分配内存会优先分配离cpu进的内存
 
-![](E:\doc\base\numa.png)
+![](numa.png)
 
-![](E:\doc\base\numa_framework.png)
+![](numa_framework.png)
 
 ## 汇编语言
 
@@ -152,7 +152,7 @@ JDK8中，加入@Contended注解，使用虚假上：JVM -XX:-RestrictContended�
 
 bios uefi工作-》自检-》到硬盘固定位置加载bootloader-》读取可配置信息-》CMOS
 
-![](E:\doc\base\pc_start.png)
+![](pc_start.png)
 
 ## OS基础
 
@@ -296,7 +296,7 @@ linux中也称为task，是系统分配资源的基本单位
 
 java读网络->jvmread（）->c库read（）->内核空间->system_call（） （系统调用处理程序）->sys_read()
 
-![](E:\doc\base\soft_interrupt_implement.png)
+![](soft_interrupt_implement.png)
 
 ### 内存管理
 
@@ -308,7 +308,7 @@ java读网络->jvmread（）->c库read（）->内核空间->system_call（） �
 
 为了解决这两个问题，诞生了现在的内存管理系统：虚拟地址 分页装入 软硬件结合寻址
 
-![](E:\doc\base\memory_manage.png)
+![](memory_manage.png)
 
 #### 1：分页
 
@@ -328,7 +328,7 @@ lru（least recently used最不常用）算法leedcode146题，头条要求手�
 
 4.站在虚拟内存的角度，进程是独享整个系统+cpu
 
-![](E:\doc\base\virtual_memory.png)
+![](virtual_memory.png)
 
 为什么实用虚拟内存？
 
@@ -346,7 +346,7 @@ lru（least recently used最不常用）算法leedcode146题，头条要求手�
 
 线性地址：通过os+mmu（硬件memory management unit）映射物理地址
 
-![](E:\doc\base\memory_address_map.png)
+![](memory_address_map.png)
 
 3、缺页中断
 

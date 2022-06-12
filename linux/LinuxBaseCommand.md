@@ -4,11 +4,11 @@
 
 命令分为内部命令和外部命令
 
-![](E:\doc\linux\command_type.png)
+![](command_type.png)
 
 **命令执行流程**
 
-![](E:\doc\linux\command_execute.png)
+![](command_execute.png)
 
 外部命令执行是否很慢？不会，内核维护了path环境变量
 
@@ -44,7 +44,7 @@
 
 ### ls（显示目录）
 
-![](E:\doc\linux\ls_details.png)
+![](ls_details.png)
 
 ### mkdir（创建目录）
 
@@ -89,21 +89,21 @@
 
 #### 编辑模式
 
-![](E:\doc\linux\vi_operate.png)
+![](vi_operate.png)
 
 #### 输入模式
 
-![](E:\doc\linux\vi_operate_2.png)
+![](vi_operate_2.png)
 
 #### 末行模式
 
-![](E:\doc\linux\vi_operate_3.png)
+![](vi_operate_3.png)
 
 ### grep
 
-![](E:\doc\linux\grep_match.png)
+![](grep_match.png)
 
-![](E:\doc\linux\grep.png)
+![](grep.png)
 
 ### cut（切分显示）
 
@@ -126,11 +126,11 @@
 
 逐行的stream进行内存修改，-i为将内存中已修改的数据刷新到磁盘中
 
-![](E:\doc\linux\sed_operation_guid.png)
+![](sed_operation_guid.png)
 
 ### awk（文本分析工具）
 
-![](E:\doc\linux\awk_operation_1.png)
+![](awk_operation_1.png)
 
 ### useradd（创建用户）
 
@@ -182,7 +182,7 @@ su（切换用户）
 
 # 二、目录
 
-![](E:\doc\linux\linux_directory.png)
+![](linux_directory.png)
 
 # 三、Linux软件安装
 
